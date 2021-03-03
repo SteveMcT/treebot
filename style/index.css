@@ -1,0 +1,131 @@
+header nav {
+  position: fixed;
+  height: 100vh;
+  width: 20rem;
+  right: -20rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background: rgba(0, 0, 0, 0.26);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  z-index: 8;
+}
+
+#main #main-img {
+  position: relative;
+  height: 160vh;
+  width: 100%;
+}
+
+#main #main-img #main-img-navout {
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  padding: 6px;
+}
+
+#main #main-img #main-img-navout #main-img-navout-span {
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: 32px;
+}
+
+#main #main-img #main-img-img {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/mountains.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+#main #main-img #main-img-text {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+#main #main-img #main-img-text h1 {
+  margin: 0 0 1rem 0;
+  font-size: 90px;
+  font-weight: 100;
+  text-shadow: 4px 4px 4px #666666;
+}
+
+#main #main-img #main-img-text p {
+  font-size: 30px;
+  text-shadow: 4px 4px 4px #666666;
+}
+
+#main #main-img #main-img-invite {
+  position: absolute;
+  top: 110vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+#main #main-img #main-img-invite #main-img-invite-button {
+  position: relative;
+  color: #fff;
+  font-size: 50px;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer #footer-support-text {
+  position: relative;
+  width: 30%;
+  display: inline-block;
+  font-size: 18px;
+  color: #797979;
+}
+
+footer #footer-support-text a {
+  color: #b8b8b8;
+}
+
+@media only screen and (max-width: 800px) {
+  footer #footer-support-text {
+    width: 80%;
+  }
+}
+
+.btn {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: #00000050;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #00000060;
+}
+
+.btn:active {
+  background: #00000086;
+}
+/*# sourceMappingURL=index.css.map */

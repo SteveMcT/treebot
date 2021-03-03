@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Spartan);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Treebot</title>
+
+    <link rel='stylesheet' href='./style/main.css'>
+    <link rel='stylesheet' href='./style/index.css'>
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Material IO -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <!-- JQuery -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <!-- in-view -->
+    <script src="./js/in-view.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            inView('#main-img-invite-button')
+                .on('enter', el => {
+                    el.classList.add('animate__fadeInUp')
+                    el.style.opacity = 1
+                })
+                .on('exit', el => {
+                    el.classList.remove('animate__fadeInUp')
+                    el.style.opacity = 0
+                });
+        });
+        let out = true
+
+        function moveNavigation() {
+            $('#navigation').css('right', out ? '0' : '-20rem')
+            $('#main-img-navout-span').css('color', 'transparent')
+
+            setTimeout(() => {
+                $('#main-img-navout-span').html(out ? 'menu' : 'close')
+                $('#main-img-navout-span').css('color', '#000')
+            }, 200)
+            out = !out
+        }
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY
+            $('#main-img-text').css('margin-top', -value * .01 + '%')
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id='navigation'>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id='main-img'>
+            <button class="btn" id='main-img-navout' onclick='moveNavigation()'>
+                <span id='main-img-navout-span' class='material-icons'>menu</span>
+            </button>
+
+            <div id='main-img-img'></div>
+            <div id='main-img-text'>
+                <h1 class="animate__animated animate__rubberBand animate__delay-1s">Treebot</h1>
+                <p>This is <strong>YOUR</strong> Discord Bot</p>
+            </div>
+
+            <div id="main-img-invite">
+                <button class="btn animate__animated" id="main-img-invite-button">
+                    Invite Treebot
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id='footer-support'>
+            <p id="footer-support-text">If you want support us, rather support <a target="_blank" href="https://teamtrees.org/">#teamtrees</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

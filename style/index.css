@@ -13,7 +13,7 @@ header nav {
 
 #main #main-img {
   position: relative;
-  height: 160vh;
+  height: 190vh;
   width: 100%;
 }
 
@@ -40,7 +40,7 @@ header nav {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("../img/mountains.png");
+  background-image: url("../img/forest.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
@@ -68,7 +68,7 @@ header nav {
   text-shadow: 4px 4px 4px #666666;
 }
 
-#main #main-img #main-img-invite {
+#main #main-img #main-img-commands {
   position: absolute;
   top: 110vh;
   left: 50%;
@@ -77,12 +77,44 @@ header nav {
   z-index: 2;
 }
 
-#main #main-img #main-img-invite #main-img-invite-button {
-  position: relative;
-  color: #fff;
-  font-size: 50px;
-  padding: 12px 20px;
+#main #main-img #main-img-commands h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-weight: 100;
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+#main #main-img #main-img-commands table tr {
+  margin: 10px 0;
+}
+
+#main #main-img #main-img-commands table tr td {
+  border: 2px solid rgba(0, 0, 0, 0.233);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 20px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.212);
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: default;
+}
+
+#main #main-img #main-img-commands table tr td:hover {
+  background: rgba(105, 105, 105, 0.212);
+}
+
+#main #main-img #main-img-commands #main-img-invite-button {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 40px;
+  padding: 12px 18px;
   border-radius: 10px;
+  margin-top: 1.8rem;
+  display: block;
+  margin: 1.8rem auto 0 auto;
 }
 
 footer {
@@ -114,8 +146,8 @@ footer #footer-support-text a {
 }
 
 .btn {
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
   background: #00000050;
   -webkit-transition: .3s;
   transition: .3s;

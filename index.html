@@ -21,19 +21,35 @@
 
     <script>
         $(document).ready(function() {
-            inView('#main-img-invite-button')
-                .on('enter', el => {
-                    el.classList.add('animate__fadeInUp')
-                    el.style.opacity = 1
-                })
-                .on('exit', el => {
-                    el.classList.remove('animate__fadeInUp')
-                    el.style.opacity = 0
-                });
+            view('#main-img-invite-button', 'animate__jackInTheBox')
+            view('#main-img-commands-table', 'animate__jackInTheBox')
         });
         let out = true
 
         function moveNavigation() {
+            $('#navigation').css('right', out ? '0' : '-20rem')
+            $('#main-img-navout-span').css('color', 'transparent')
+
+            setTimeout(() => {
+                $('#main-img-navout-span').html(out ? 'menu' : 'close')
+                $('#main-img-navout-span').css('color', '#000')
+            }, 200)
+            out = !out
+        }
+
+        function view(element, animation) {
+            inView(element)
+                .on('enter', el => {
+                    el.classList.add(animation)
+                    el.style.opacity = 1
+                })
+                .on('exit', el => {
+                    el.classList.remove(animation)
+                    el.style.opacity = 0
+                });
+        }
+
+        function moveTable() {
             $('#navigation').css('right', out ? '0' : '-20rem')
             $('#main-img-navout-span').css('color', 'transparent')
 
@@ -69,7 +85,34 @@
                 <p>This is <strong>YOUR</strong> Discord Bot</p>
             </div>
 
-            <div id="main-img-invite">
+            <div id="main-img-commands">
+                <h1>Commands</h1>
+                <table class="animate__animated" id="main-img-commands-table">
+                    <tr>
+                        <td>t!tree</td>
+                        <td>Shows the tree you have grown</td>
+                    </tr>
+                    <tr>
+                        <td>t!plant</td>
+                        <td>Shows you the plant menu</td>
+                    </tr>
+                    <tr>
+                        <td>t!scoreboard</td>
+                        <td>Shows you the global leaderboard</td>
+                    </tr>
+                    <tr>
+                        <td>t!shop</td>
+                        <td>Shows you the TreeBot shop</td>
+                    </tr>
+                    <tr>
+                        <td>t!levels</td>
+                        <td>Shows you the leveling stages</td>
+                    </tr>
+                    <tr>
+                        <td>t!gift</td>
+                        <td>Allows you redeem your daily gift</td>
+                    </tr>
+                </table>
                 <button class="btn animate__animated" id="main-img-invite-button">
                     Invite Treebot
                 </button>

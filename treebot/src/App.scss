@@ -1,0 +1,23 @@
+main {
+    background: url('./bg.jpg');
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    #greeting {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        width: fit-content;
+        padding: 20px 20px 0 20px;
+        #greeting-small {
+            float: right;
+            font-size: 24px;
+        }
+        #greeting-header {
+            font-size: 120px;
+        }
+    }
+}
